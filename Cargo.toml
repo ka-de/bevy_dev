@@ -6,7 +6,7 @@ description = "Dev tools for Bevy Engine"
 keywords = ["prototype", "devtools", "textures", "assets"]
 categories = ["game-engines", "game-development"]
 readme = "README.md"
-repository = "https://github.com/Vixenka/bevy_dev"
+repository = "https://github.com/ka-de/bevy_dev"
 license = "MIT"
 edition = "2021"
 
@@ -15,19 +15,19 @@ default = ["ui"]
 ui = ["dep:bevy_egui"]
 
 [dependencies]
-bevy = { version = "0.13.2", default-features = false, features = [
-    "bevy_render",
-    "bevy_pbr",
-    "png",
+bevy = { git = "https://github.com/bevyengine/bevy", default-features = false, features = [
+  "bevy_render",
+  "bevy_pbr",
+  "png",
 ] }
 random_color = "0.8.0"
 rust-embed = "8.3.0"
 uuid = "1.7.0"
 
-bevy_egui = { version = "0.27", optional = true }
+bevy_egui = { git = "https://github.com/ka-de/bevy_egui", branch = "0.14", optional = true }
 
 [dev-dependencies]
-bevy = { version = "0.13.2", default-features = false, features = [
-    "bevy_winit",
-    "tonemapping_luts",
+bevy = { git = "https://github.com/bevyengine/bevy", default-features = false, features = [
+  "bevy_winit",
+  "tonemapping_luts",
 ] }
